@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Scraper</title>
+    <link rel="stylesheet" href="static/style.css">
+  </head>
+  <body>
+    <h1>Web Scraper</h1>
+    <p>Enter the website and keyword you want to scrape:</p>
+    <form action="/results" method="POST">
+      <label for="website">Website:</label>
+      <input type="text" id="website" name="website" placeholder="Enter website URL"><br>
+      <small>E.g. https://example.com</small><br><br>
+      <label for="keyword">Keyword:</label>
+      <input type="text" id="keyword" name="keyword" placeholder="Enter keyword"><br>
+      <small>E.g. "python tutorial"</small><br><br>
+      <label for="date_range">Date Range:</label>
+      <select id="date_range" name="date_range">
+        <option value="">--Select date range--</option>
+        <option value="today">Today</option>
+        <option value="last_week">Last Week</option>
+        <option value="last_month">Last Month</option>
+        <option value="last_year">Last Year</option>
+        <option value="custom">Custom range</option>
+      </select><br>
+      <small>Select a date range to search within. If you choose "Custom range," enter the start and end dates below.</small><br><br>
+      <label for="start_date">Start Date:</label>
+      <input type="date" id="start_date" name="start_date"><br><br>
+      <label for="end_date">End Date:</label>
+      <input type="date" id="end_date" name="end_date"><br><br>
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" placeholder="Enter location"><br>
+      <small>If applicable, enter the location you want to search within (e.g. "San Francisco").</small><br><br>
+      <label for="category">Category:</label>
+      <select id="category" name="category">
+        <option value="">--Select category--</option>
+        <option value="tech">Technology</option>
+        <option value="sports">Sports</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="business">Business</option>
+      </select><br><br>
+      <input type="submit" value="Search">
+    </form>
+  </body>
+</html>
